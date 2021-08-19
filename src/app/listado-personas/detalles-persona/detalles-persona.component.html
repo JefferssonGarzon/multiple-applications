@@ -1,0 +1,20 @@
+<div class="container">
+    <ng-container *ngIf='tipo; else caso'>
+        <h2>Más detalles</h2>
+        <div class="mt-4">
+            <h3>*) {{ personas.nombre }} {{ personas.apellido }}</h3>
+            <p><b>edad:</b> {{ personas.edad }} | <b>correo:</b> {{ personas.correo }} | <b>direccion:</b> {{ personas.direccion }}</p>
+        </div>
+        <button class="btn btn-warning" (click)='volver()'>Cerrar</button>
+        <div class="mt-3">
+            <p>Modo detalles: {{ modoDetalles }}</p>
+        </div>
+    </ng-container>
+    <ng-template #caso>
+        <div class="mt-5">
+            <p>No esta habilitado el modo detalles</p>
+        </div>
+    </ng-template>
+</div>
+
+

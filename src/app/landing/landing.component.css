@@ -1,0 +1,21 @@
+h1{
+    margin: 30px 0;
+    font-size: 50px;
+    text-align: center ;
+}
+
+mat-grid-tile{
+    background-color:antiquewhite;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+}
+
+mat-grid-tile:hover{
+    background-color: rgba(32, 182, 45, 0.438);
+    cursor: pointer;
+}
+
+img{
+    margin: auto;
+}

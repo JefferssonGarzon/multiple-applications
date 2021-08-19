@@ -1,0 +1,81 @@
+<div class="container">
+    <button class="btn btn-success atras" routerLink=''>
+        <img src="../../assets/img/2x/baseline_arrow_back_white_24dp.png" alt="">
+    </button>
+    <div class="col mt-3">
+        <h3> {{ titulo }} </h3>
+    </div>
+    <hr>
+    <h6>Información básica</h6>
+    <form class="row mb-3" #f='ngForm' (ngSubmit)='f.form.valid && personaAgregada()'>
+        <div class="form-group col-md-2">
+            <!-- <label for="nombre" class="sr-only">Nombre</label> -->
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre"
+            class="form-control" [(ngModel)]='nombreInput' autocomplete="off" required>
+        </div>
+        <div class="form-group col-md-2">
+            <!-- <label for="nombre" class="sr-only">Nombre</label> -->
+            <input type="text" name="apellido" id="apellido" placeholder="apellido"
+            class="form-control" [(ngModel)]='apellidoInput' autocomplete="off" required>
+        </div>
+        <div class="form-group col-md-2">
+            <!-- <label for="edad" >Edad</label> -->
+            <input type="number" name="edad" id="edad" placeholder="edad"
+            class="form-control" [(ngModel)]='edadInput' autocomplete="off" required>
+        </div>
+        <div class="form-group col-md-2">
+            <input type="email" name="correo" id="correo" placeholder="Correo"
+            class="form-control" [(ngModel)]='correoInput' autocomplete="off">
+        </div>
+        <div class="form-group col-md-3">
+            <input type="text" name="direccion" id="direccion" placeholder="direccion"
+            class="form-control" [(ngModel)]='direccionInput' autocomplete="off">
+        </div>
+        <div class="form-group text-center mt-4">
+            <button type="submit" class="btn btn-primary add">
+                Agregar
+            </button>
+        </div> 
+    </form>
+    <hr>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Edad</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let persona of personas; let i = index'>
+                        <td scope="row"> {{ i+1 }} </td>
+                        <td> {{ persona.nombre }} </td>
+                        <td> {{ persona.apellido }} </td>
+                        <td> {{ persona.edad }} </td>
+                        <td>
+                            <button class="btn btn-primary"
+                            [routerLink]='["/listado/detalles", i]'
+                            [queryParams]="{modoDetalles:'1'}">Ver detalle</button>
+                            <button class="btn btn-warning eliminar" (click)='eliminarPersona(i)'>
+                                <img src="../../assets/img/1x/outline_delete_black_24dp.png" alt="">
+                            </button>
+                            <button class="btn modificar" [routerLink]='["/listado/modificar", i]'>
+                                <img src="../../assets/img/1x/outline_edit_black_24dp.png" alt="">
+                            </button>
+                        </td>
+                    </tr>   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<router-outlet></router-outlet>

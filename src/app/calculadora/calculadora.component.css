@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo&display=swap');
+
+*{
+    font-family: Koho;
+    color: black;
+}
+
+html{
+    height: 100%;
+}
+
+html > body {
+    background-color: #48cae4;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.atras{
+    width: 65px;
+    height: 65px;
+    position: sticky;
+    top: 50px;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+
+form > div{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+label{
+    margin-bottom: 2px;
+}
+
+img{
+    width: 35px;
+    height: 35px;
+}
+
+.mmm{
+    margin-bottom: 20px;
+}
+
+.pantalla {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #caf0f8;
+    border-radius: 10px;
+
+    text-align: center;
+
+}
+
+.pantalla > p { 
+    color: #03045e;
+    margin: auto;
+    font-size: larger;
+}
+
+.botones{
+    height: 50px;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.igual{
+    width: 150px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0077b6;
+}
+
+.igual:hover{
+    background-color: #06537c;
+}
+
+.limpiar{
+    width: 60px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffb703;
+
+    font-weight: bolder;
+}
+
+.limpiar:hover{
+    background-color: #a57a0e;
+}

@@ -1,0 +1,39 @@
+<div class="cabecero">
+    <button class="btn btn-success atras" routerLink=''>
+        <img src="../../assets/img/2x/baseline_arrow_back_white_24dp.png" alt="">
+    </button>
+    <div class="presupuesto">
+        <div class="presupuesto_titulo">
+            presupuesto disponible
+        </div>
+        <div class="presupuesto_valor" id="presupuesto">
+            {{ presupuestoTotal | currency:'COL':'$':'1.2-2' }}
+        </div>
+        <div class="presupuesto_ingreso limpiarEstilos">
+            <div class="presupuesto_ingreso--texto">
+                Ingresos
+            </div>
+            <div class="derecha">
+                <div class="presupuesto_ingreso--valor" id="ingresos">
+                    {{ ingresoTotal | currency:'COL':'$':'1.2-2' }}
+                </div>
+                <div class="presupuesto_ingreso--porcentaje">
+
+                </div>
+            </div>
+        </div>
+        <div class="presupuesto_egreso limpiarEstilos">
+            <div class="presupuesto_egreso--texto">
+                Egresos
+            </div>
+            <div class="derecha limpiarEstilos">
+                <div class="presupuesto_egreso--valor" id="egresos">
+                    {{ egresoTotal | currency:'COL':'$':'1.2-2' }}
+                </div>
+                <div class="presupuesto_egreso--porcentaje" id="porcentaje">
+                    {{ porcentajeTotal | percent }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

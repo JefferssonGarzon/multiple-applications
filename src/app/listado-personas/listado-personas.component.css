@@ -1,0 +1,46 @@
+*{
+    font-family: Koho;
+}
+
+.modificar{
+    float: right;
+    margin-left: 5px;
+    background-color: yellowgreen;
+    border: none;
+}
+
+.modificar:hover{
+    background-color: rgb(8, 175, 8);
+}
+
+.eliminar{
+    float: right;
+    margin-left: 5px;
+    background-color: rgba(224, 104, 104, 0.979);
+    border: none;
+}
+
+.eliminar:hover{
+    background-color: rgba(221, 63, 63, 0.979);
+}
+
+.opciones{
+    align-items: center;
+}
+
+.add{
+    width: 25%;
+}
+
+.atras{
+    width: 65px;
+    height: 65px;
+    position: sticky;
+    top: 10px;
+    border-radius: 50%;
+}
+
+img{
+    width: 35px;
+    height: 35px;
+}
