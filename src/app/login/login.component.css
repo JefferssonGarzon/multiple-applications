@@ -1,0 +1,63 @@
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section{
+    display: flex;
+    flex: 1;
+}
+
+.cuadro{
+    width: 35%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    background-color: aquamarine;
+    border-radius: 15px;
+}
+
+form{
+    text-align: center;
+    padding: 20px;
+    position: static;
+}
+
+.campos{
+    margin-top: 25px;
+}
+
+label{
+    display: block;
+}
+
+input{
+    height: 30px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.atras{
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    border-radius: 50%;
+}
+
+#back{
+    width: 35px;
+    height: 35px;
+}

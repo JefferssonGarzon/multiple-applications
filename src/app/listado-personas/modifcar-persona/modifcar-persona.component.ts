@@ -1,7 +1,7 @@
 import { NumberSymbol } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PersonasService } from 'src/app/services/personas.service';
+import { PersonasService } from '../../services/listado-personas/personas.service';
 
 
 @Component({

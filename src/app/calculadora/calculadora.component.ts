@@ -11,7 +11,7 @@ export class CalculadoraComponent implements OnInit {
   opB:number = 0;
   operacion:number = 0;
   total:number = 0;
-  resultado:string = 'n ( + , - , * , / ) n';
+  resultado:string = 'Ingresa los digitos a operar';
   
   constructor() { }
 
@@ -59,7 +59,7 @@ export class CalculadoraComponent implements OnInit {
   }
 
   limpiar(){
-    this.resultado = 'n ( + , - , * , / ) n';
+    this.resultado = 'Ingresa los digitos a operar';
   }
 
 }

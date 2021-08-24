@@ -12,8 +12,7 @@ import { ListadoPersonasComponent } from './listado-personas/listado-personas.co
 import { DetallesPersonaComponent } from './listado-personas/detalles-persona/detalles-persona.component';
 import { InformacionExtraPersonaComponent } from './listado-personas/informacion-extra-persona/informacion-extra-persona.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoggingServiceService } from './services/logging-service.service';
-import { PersonasService } from './services/personas.service';
+import { PersonasService } from './services/listado-personas/personas.service';
 import { CabeceroComponent } from './presupuesto/cabecero/cabecero.component';
 import { IngresoComponent } from './presupuesto/ingreso/ingreso.component';
 import { EgresoComponent } from './presupuesto/egreso/egreso.component';
@@ -22,10 +21,12 @@ import { IngresoService } from './services/presupuesto/ingreso.service';
 import { EgresoService } from './services/presupuesto/egreso.service';
 import { ModifcarPersonaComponent } from './listado-personas/modifcar-persona/modifcar-persona.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { DataService } from './services/data.service';
+import { DataService } from './services/listado-personas/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PresupuestoComponent } from './presupuesto/presupuesto.component';
 import { LandingComponent } from './landing/landing.component';
+import { LoginComponent } from './login/login.component';
+import { LoginService } from './services/listado-personas/login.service';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { LandingComponent } from './landing/landing.component';
     PageNotFoundComponent,
     PresupuestoComponent,
     LandingComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,11 +54,12 @@ import { LandingComponent } from './landing/landing.component';
     HttpClientModule,
     MatGridListModule,
   ],
-  providers: [LoggingServiceService, 
-    PersonasService,
+  providers: [
     IngresoService,
     EgresoService,
-    DataService],
+    DataService,
+    PersonasService,
+    LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,21 @@
+<div class="contenedor">
+    <button class="btn btn-success atras" routerLink='/'>
+        <img id="back" src="../../assets/img/2x/baseline_arrow_back_white_24dp.png" alt="">
+    </button>
+    <div class="section">
+        <div class="cuadro">
+            <form action="" #f='ngForm' (ngSubmit)='f.form.valid && login(f)'>
+                <img src="../../assets/img/2x/baseline_face_black_24dp.png" alt="">
+                <div class="campos">
+                    <label for="email">Correo</label>
+                    <input type="email" name="email" id="email" ngModel required size="20">
+                </div>
+                <div class="campos">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password" ngModel required size="20">
+                </div>
+                <button type="submit" class="btn btn-success mt-4">Entrar</button>
+            </form>
+        </div>
+    </div>
+</div>

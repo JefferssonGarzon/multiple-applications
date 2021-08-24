@@ -1,10 +1,8 @@
 import { NumberSymbol } from '@angular/common';
 import { ThisReceiver } from '@angular/compiler';
 import { EventEmitter, Injectable } from '@angular/core';
-import { DatosExtra } from '../models/datos-extra-persona.model';
-import { Persona } from '../models/persona.model';
+import { Persona } from '../../models/persona.model';
 import { DataService } from './data.service';
-import { LoggingServiceService } from './logging-service.service';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +13,7 @@ export class PersonasService {
 
   personas: Persona[] = [];
 
-  constructor(private logService:LoggingServiceService, private dataService: DataService) { }
+  constructor(private dataService: DataService) { }
 
   setPersonas(personas: Persona[]){
     this.personas = personas;

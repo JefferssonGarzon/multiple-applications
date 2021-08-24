@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DatosExtra } from '../models/datos-extra-persona.model';
 import { Persona } from '../models/persona.model';
-import { LoggingServiceService } from '../services/logging-service.service';
-import { PersonasService } from '../services/personas.service';
+import { PersonasService } from '../services/listado-personas/personas.service';
+
+import firebase from 'firebase';
+import { LoginService } from '../services/listado-personas/login.service';
 
 @Component({
   selector: 'app-listado-personas',
@@ -22,7 +24,7 @@ export class ListadoPersonasComponent implements OnInit {
 
   personas: Persona[] = [];
 
-  constructor(private logServicio:LoggingServiceService, private personaService:PersonasService, private router:Router) {
+  constructor(private personaService:PersonasService, private loginService: LoginService  ,private router:Router) {
     // this.personaService.saludar.subscribe(
     //   (indice:number) => {
     //     alert('El indice es: '+indice);
@@ -51,6 +53,10 @@ export class ListadoPersonasComponent implements OnInit {
 
   eliminarPersona(i:number){
     this.personaService.deletePersona(i);
+  }
+
+  salir(){
+    this.loginService.salir();
   }
 
 }
