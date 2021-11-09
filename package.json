@@ -11,12 +11,12 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.0.0",
-    "@angular/cdk": "^12.2.0",
+    "@angular/cdk": "^13.0.0",
     "@angular/common": "~13.0.0",
     "@angular/compiler": "~13.0.0",
     "@angular/core": "~13.0.0",
     "@angular/forms": "~13.0.0",
-    "@angular/material": "^12.2.0",
+    "@angular/material": "^13.0.0",
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
@@ -28,7 +28,7 @@
     "material-icons": "^1.1.1",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
-    "tslib": "^2.3.0",
+    "tslib": "^2.3.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

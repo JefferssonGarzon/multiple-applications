@@ -4,7 +4,6 @@ import { DatosExtra } from '../models/datos-extra-persona.model';
 import { Persona } from '../models/persona.model';
 import { PersonasService } from '../services/listado-personas/personas.service';
 
-import firebase from 'firebase';
 import { LoginService } from '../services/listado-personas/login.service';
 
 @Component({
